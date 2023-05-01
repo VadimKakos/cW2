@@ -1,5 +1,6 @@
 package com.example.cw2.repository;
 
+import com.example.cw2.exception.BadRequestException;
 import com.example.cw2.model.Question;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
@@ -22,19 +23,22 @@ public class JavaQuestionRepository implements QuestionRepository {
         questions.add(new Question("question5", "answer5"));
     }
 
-    public int getInt() {
-        int x = 1;
-        return x;
-    }
-
     @Override
     public Question add(Question question) {
-        return null;
+        if (question == null) {
+            throw new BadRequestException("Введите вопрос");
+        }
+        questions.add(question);
+        return question;
     }
 
     @Override
     public Question remove(Question question) {
-        return null;
+        if (!questions.contains(question)) {
+            throw new BadRequestException("Такого вопроса нет");
+        }
+        questions.remove(question);
+        return question;
     }
 
     @Override
