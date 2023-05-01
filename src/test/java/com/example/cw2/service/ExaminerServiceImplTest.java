@@ -21,12 +21,10 @@ import static org.mockito.ArgumentMatchers.anyInt;
 @ExtendWith(MockitoExtension.class)
 class ExaminerServiceImplTest {
 
-  /*  @InjectMocks
-    private ExaminerService out;
+    @InjectMocks
+    private ExaminerServiceImpl out;
     @Mock
     QuestionService questionService;
-    @Mock
-    private QuestionRepository questionRepository;
     @Mock
     UtilService utilService;
 
@@ -58,5 +56,5 @@ class ExaminerServiceImplTest {
         Mockito.verify(questionService, Mockito.times(1)).getAll();
         Mockito.verify(questionService, Mockito.never()).getRandomQuestion();
         Mockito.verify(utilService, Mockito.never()).getRandomInt(anyInt());
-    }*/
+    }
 }

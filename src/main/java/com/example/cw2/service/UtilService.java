@@ -12,6 +12,7 @@ import java.util.Random;
 public class UtilService {
     private Random random;
 
+
     public void setRandom(Random random) {
         this.random = random;
     }

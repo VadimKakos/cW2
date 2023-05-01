@@ -31,7 +31,7 @@ public class ExaminerServiceImpl implements ExaminerService {
             var questionService = questionServices.get(serviceNumber);
             result.add(questionService.getRandomQuestion());
         }
-        return null;
+        return result ;
     }
 
     private int calculateAmount() {
