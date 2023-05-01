@@ -19,6 +19,8 @@ public class ExamController {
 
     @GetMapping("/get/{amount}")
     public Collection<Question> gqtQuestions(@PathVariable("amount") Integer amount) {
+
         return examinerService.getQuestions(amount);
     }
+
 }
